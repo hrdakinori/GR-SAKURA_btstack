@@ -87,26 +87,26 @@ btstack - A Portable User-Space Bluetooth Stack - Google Project Hosting
 hci_cmds.c
 
 127c127
-<                 pos += 248;
+&lt;                 pos += 248;
 ---
->                 pos += len+1;
+&qt;                 pos += len+1;
 </pre>
 
 <pre>
 run_loop_embedded.c
 
 146c146
-<     while (1) {
+&lt;     while (1) {
 ---
-> //    while (1) {
+&qt; //    while (1) {
 166c166
-<         hal_cpu_disable_irqs();
+&lt;         hal_cpu_disable_irqs();
 ---
-> /*        hal_cpu_disable_irqs();
+&qt; /*        hal_cpu_disable_irqs();
 172c172
-<     }
+&lt;     }
 ---
->     }*/
+&qt;     }*/
 </pre>
 
 ##SPPí êMÇÃè⁄ç◊
