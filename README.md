@@ -6,6 +6,12 @@ GR-SAKURAのUSB HOSTを使用してUSB Bluetooth ドングルでSPP通信ができるようにします
 GR-SAKURAでUSB HOSTを使う場合ジャンパーの設定(J13,J15の接続)が必要です
 J1の接続も必要と思われる
 
+
+SPPでの通信コマンド
+「l11」でGR-SAKURAのLED2が点灯「l10」で消灯
+「l21」でGR-SAKURAのLED3が点灯「l20」で消灯
+
+
 ##動作確認環境
  ドングル
  BT-MicroEDR1X PLANEX
@@ -102,7 +108,7 @@ run_loop_embedded.c
 166c166
 &lt;         hal_cpu_disable_irqs();
 ---
-&qt; /*        hal_cpu_disable_irqs();
+> /*        hal_cpu_disable_irqs();
 172c172
 &lt;     }
 ---

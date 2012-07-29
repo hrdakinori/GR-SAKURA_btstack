@@ -48,7 +48,7 @@ void setup()
     digitalWrite(PIN_LED0, 0);
     digitalWrite(PIN_LED1, 0);
     digitalWrite(PIN_LED2, 0);
-    digitalWrite(PIN_LED2, 0);
+    digitalWrite(PIN_LED3, 0);
     Serial.begin(38400,SCI_SCI0P2x);
     Serial.setDefault(); // printfをSerialに出力
 
