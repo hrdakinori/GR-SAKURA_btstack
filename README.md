@@ -89,7 +89,7 @@ hci_cmds.c
 127c127
 &lt;                 pos += 248;
 ---
-&qt;                 pos += len+1;
+>                 pos += len+1;
 </pre>
 
 <pre>
@@ -98,7 +98,7 @@ run_loop_embedded.c
 146c146
 &lt;     while (1) {
 ---
-&qt; //    while (1) {
+> //    while (1) {
 166c166
 &lt;         hal_cpu_disable_irqs();
 ---
@@ -106,7 +106,7 @@ run_loop_embedded.c
 172c172
 &lt;     }
 ---
-&qt;     }*/
+>     }*/
 </pre>
 
 ##SPP’ÊM‚ÌÚ×
