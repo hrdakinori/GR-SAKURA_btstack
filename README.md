@@ -25,7 +25,7 @@ btstack - A Portable User-Space Bluetooth Stack - Google Project Hosting
 
 
 このリポジトリのファイルとbtstackのファイルを以下のフォルダ構成にします
-
+<pre>
 ┬─bt_spp.c
 │  bt_spp.h
 │  gr_sketch.cpp
@@ -79,17 +79,20 @@ btstack - A Portable User-Space Bluetooth Stack - Google Project Hosting
             sdp.h
             sdp_util.c
             utils.c
-
+</pre>
 
 ##btstackの以下のファイルを変更します
 
+<pre>
 hci_cmds.c
 
 127c127
 <                 pos += 248;
 ---
 >                 pos += len+1;
+</pre>
 
+<pre>
 run_loop_embedded.c
 
 146c146
@@ -104,6 +107,7 @@ run_loop_embedded.c
 <     }
 ---
 >     }*/
+</pre>
 
 ##SPP通信の詳細
 
