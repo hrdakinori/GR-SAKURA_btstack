@@ -49,15 +49,14 @@ unsigned char usb_bulk_buf[64];
 
 static void (*usb_bt_event_handler)(unsigned char packet_type, unsigned char *packet, int size) = NULL;
 int count = 0;
-int usb_task(void)
+void usb_task(void)
 {
-int stat = -1;
     if(usb_connected == 0)
     {
         if(tkusbh_connect(500) != TKUSBH_OK)
         {
             printf("*Connection TIMEOUT. Retry...\n");
-            return stat;
+            return;
         }
         // ShowDescriptors();
         usb_connected = 1;
@@ -77,12 +76,13 @@ int stat = -1;
         printf("*DisConnected...\n");
         usb_connected = 0;
 
-        return stat;
+        return;
     }
 
     {
+        int stat;
         stat = tkusbh_interrupt_read(1,usb_int_buf,16);
-        if(stat >= 0 && stat!=3)
+        if(stat >= 0)
         {
             if(usb_bt_event_handler != NULL)
             {
@@ -103,7 +103,6 @@ int stat = -1;
         }
         count++;
     }
-return stat;
 }
 
 int usb_getstatus(void)

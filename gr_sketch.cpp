@@ -63,7 +63,11 @@ void setup()
 
 void loop()
 {
-    usb_task();
+	if(usb_task()==3)
+	{
+		//インタラプトIN転送で受信したデータ長が3のときはシステムをリセットする(フリーズ対策)
+		system_reboot( REBOOT_USERAPP );
+	}
     bt_task();
     if(Serial.available())
     {
