@@ -51,7 +51,7 @@ extern "C" {
 #define USB_BT_EVENT_INTERRUPT_READ    1
 #define USB_BT_EVENT_BULK_READ        2
 
-void usb_task(void);
+int usb_task(void);
 int usb_getstatus(void);
 
 int usb_bt_control_write(unsigned char *packet, int size);
